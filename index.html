@@ -1,322 +1,314 @@
 
 
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Etiquetas de optimización para que Google te encuentre al buscar MicroXystem -->
-    <meta name="description" content="MicroXystem es un sistema de contabilidad, facturación e inventario en Quito, Ecuador. Diseñado para optimizar tu negocio.">
-    <meta name="keywords" content="MicroXystem, sistema de contabilidad, facturación electrónica, control de inventario, Quito">
-    <meta name="author" content="MicroXystem">
-    
-    <title>MicroXystem - Sistema de Contabilidad y Facturación</title>
+    <meta name="description" content="MicroXystem - Sistema integral de contabilidad, facturación electrónica e inventario. Optimiza la gestión de tu negocio de forma eficiente.">
+    <meta name="keywords" content="MicroXystem, sistema contable, facturacion electronica, control de inventario, software empresarial">
+    <title>MicroXystem - Sistema de Gestión Empresarial</title>
     <style>
+        /* Variables de Diseño con enfoque en Celeste */
+        :root {
+            --celeste-principal: #38bdf8; /* Celeste brillante moderno */
+            --celeste-oscuro: #0284c7;    /* Azul celeste para contrastes y botones */
+            --celeste-claro: #e0f2fe;     /* Fondo suave para destacar secciones */
+            --gris-oscuro: #1e293b;       /* Texto principal */
+            --gris-blanco: #f8fafc;       /* Fondo general */
+            --blanco: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
         }
+
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: var(--gris-blanco);
+            color: var(--gris-oscuro);
             line-height: 1.6;
         }
+
+        /* Cabecera / Navegación */
         header {
-            background-color: #ffffff;
-            padding: 15px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: var(--blanco);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
+            z-index: 100;
         }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gris-oscuro);
+            text-decoration: none;
         }
+
         .logo span {
-            color: #2596be;
+            color: var(--celeste-principal);
         }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #2596be;
-        }
-        .btn-header {
-            background-color: #2596be;
-            color: white;
-            padding: 8px 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .btn-header:hover {
-            background-color: #1a6f8e;
-            color: white;
-        }
-        .hero {
-            padding: 80px 10%;
+
+        .nav-links {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-            color: white;
-            min-height: 70vh;
-        }
-        .hero-text {
-            max-width: 550px;
-        }
-        .hero-text h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .hero-text p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #bdc3c7;
-        }
-        .hero-buttons .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 15px;
-            transition: 0.3s;
-        }
-        .btn-primary {
-            background-color: #2596be;
-            color: white;
-        }
-        .btn-primary:hover {
-            background-color: #1a6f8e;
-        }
-        .btn-secondary {
-            border: 2px solid white;
-            color: white;
-        }
-        .btn-secondary:hover {
-            background-color: white;
-            color: #2c3e50;
-        }
-        .features {
-            padding: 80px 10%;
-            text-align: center;
-        }
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        .section-subtitle {
-            color: #7f8c8d;
-            margin-bottom: 50px;
-            font-size: 18px;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .feature-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-        .feature-card h3 {
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        .feature-card p {
-            color: #7f8c8d;
-            font-size: 15px;
-        }
-        .info-section {
-            background-color: #eaeded;
-            padding: 80px 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        .info-img {
-            flex: 1;
-            min-width: 300px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .info-img h4 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            border-left: 4px solid #2596be;
-            padding-left: 10px;
-        }
-        .info-img ul {
             list-style: none;
-            padding-left: 10px;
+            gap: 2rem;
         }
-        .info-img li {
-            margin-bottom: 10px;
-            color: #555;
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gris-oscuro);
+            font-weight: 500;
+            transition: color 0.3s;
         }
-        .info-text {
-            flex: 1.2;
-            min-width: 300px;
+
+        .nav-links a:hover {
+            color: var(--celeste-oscuro);
         }
-        .info-text h2 {
-            font-size: 32px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .info-text p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .contact {
-            padding: 80px 10%;
-            background-color: #ffffff;
+
+        /* Sección Hero (Principal) */
+        .hero {
+            background: linear-gradient(135deg, var(--celeste-claro) 0%, var(--blanco) 100%);
+            padding: 5rem 2rem;
             text-align: center;
         }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .contact-box {
-            background: #f8f9fa;
-            padding: 20px 40px;
-            border-radius: 8px;
-            min-width: 200px;
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--gris-oscuro);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
         }
-        .contact-box h4 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+
+        .hero h1 span {
+            color: var(--celeste-oscuro);
         }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .btn-celeste {
+            display: inline-block;
+            background-color: var(--celeste-principal);
+            color: var(--blanco);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-celeste:hover {
+            background-color: var(--celeste-oscuro);
+            transform: translateY(-2px);
+        }
+
+        /* Sección de Módulos / Funciones */
+        .features {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--celeste-principal);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .grid-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--blanco);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--celeste-principal);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--celeste-oscuro);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--gris-oscuro);
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Pie de Página / Contacto */
         footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: var(--gris-oscuro);
+            color: var(--blanco);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: var(--celeste-principal);
+        }
+
+        .contact-info a {
+            color: var(--celeste-principal);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--blanco);
+        }
+
+        .copyright {
             text-align: center;
-            padding: 30px;
-            font-size: 14px;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Responsivo sencillo */
+        @media (max-width: 768px) {
+            .nav-container, .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                margin-top: 1rem;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navegación -->
     <header>
-        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-            <img src="Logo.jpeg" alt="Logo de MicroXystem" style="height: 50px; width: auto; max-width: 100%; border-radius: 5px;">
-            MicroXystem
-        </div>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#funciones">Funciones</a>
-            <a href="#detalles">Detalles</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#inicio" class="btn-header">Probar Demo</a>
+        <nav class="nav-container">
+            <a href="#" class="logo">Micro<span>X</span>ystem</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#modulos">Módulos</a></li>
+                <li><a href="#soporte">Soporte</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- Sección de Bienvenida -->
     <section class="hero" id="inicio">
-        <div class="hero-text">
-            <h1>Lleva el control de tu negocio al siguiente nivel</h1>
-            <p>MicroXystem es la plataforma todo en uno diseñada para simplificar tu contabilidad, facturación y control de inventarios sin complicaciones.</p>
-            <div class="hero-buttons">
-                <a href="#funciones" class="btn btn-primary">Ver Funciones</a>
-                <a href="#contacto" class="btn btn-secondary">Saber más</a>
-            </div>
+        <div class="hero-content">
+            <h1>Bienvenido a <span>MicroXystem</span></h1>
+            <p>La plataforma inteligente diseñada para simplificar y automatizar los procesos operativos, contables y administrativos de tu negocio en tiempo real.</p>
+            <a href="#modulos" class="btn-celeste">Explorar Módulos</a>
         </div>
-        <div style="font-size: 150px; opacity: 0.2;">📈</div>
     </section>
 
-    <section class="features" id="funciones">
-        <h2 class="section-title">¿Qué ofrece MicroXystem?</h2>
-        <p class="section-subtitle">Todo lo que necesitas para organizar las finanzas de tu emprendimiento o empresa.</p>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">📂</div>
+    <!-- Características del Sistema -->
+    <section class="features" id="modulos">
+        <h2 class="section-title">Nuestras Soluciones</h2>
+        <div class="grid-features">
+            
+            <div class="card">
+                <div class="card-icon">📊</div>
                 <h3>Contabilidad Integrada</h3>
-                <p>Registra tus ingresos y egresos de forma automática. Mantén un balance neto de tu flujo de caja en tiempo real.</p>
+                <p>Genera reportes financieros, balances generales e informes de pérdidas y ganancias de forma automatizada y sin complicaciones.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🧾</div>
-                <h3>Facturación Rápida</h3>
-                <p>Genera reportes de ventas y emite información detallada de tus transacciones para tus clientes.</p>
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Facturación Electrónica</h3>
+                <p>Emite comprobantes electrónicos autorizados de manera rápida, segura y bajo todas las normativas vigentes.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">📦</div>
-                <h3>Control de Inventario</h3>
-                <p>Administra el stock de tus productos. Evita quedarte sin mercancía con alertas y registros detallados.</p>
+
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <h3>Control de Inventarios</h3>
+                <p>Monitorea tu stock en tiempo real, gestiona ingresos y salidas de bodega, y recibe alertas automáticas de abastecimiento.</p>
             </div>
+
         </div>
     </section>
 
-    <section class="info-section" id="detalles">
-        <div class="info-img">
-            <h4>Ficha Técnica de MicroXystem</h4>
-            <ul>
-                <li><strong>Tipo:</strong> Aplicación Web (SaaS)</li>
-                <li><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</li>
-                <li><strong>Seguridad:</strong> Base de datos en la nube encriptada</li>
-                <li><strong>Compatibilidad:</strong> PC, Tablets y Móviles</li>
-            </ul>
-        </div>
-        <div class="info-text">
-            <h2>Datos clave y organización</h2>
-            <p>El principal objetivo de <strong>MicroXystem</strong> es la optimización del tiempo. Olvídate de los cuadernos de notas o de complejas hojas de cálculo propensas a errores. Al centralizar tus datos de venta e inventario, obtienes reportes automáticos al instante.</p>
-            <p>Es una solución ligera, rápida y pensada especialmente para emprendedores y microempresas que buscan una transición digital sin curvas de aprendizaje complejas.</p>
-        </div>
-    </section>
-
-    <section class="contact" id="contacto">
-        <h2 class="section-title">¿Tienes preguntas?</h2>
-        <p class="section-subtitle">Estamos aquí para ayudarte a digitalizar tu negocio.</p>
-        
-        <div class="contact-info">
-            <div class="contact-box">
-                <h4>📧 Correo</h4>
-                <p>soporte@microxystem.com</p>
+    <!-- Pie de Página -->
+    <footer id="soporte">
+        <div class="footer-content">
+            <div class="footer-logo">
+                Micro<span>X</span>ystem
             </div>
-            <div class="contact-box">
-                <h4>📍 Ubicación</h4>
-                <p>Quito, Ecuador</p>
+            <div class="contact-info">
+                <p>¿Necesitas ayuda técnica? Escríbenos a: <a href="mailto:soporte@microxystem.com">soporte@microxystem.com</a></p>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 MicroXystem. Todos los derechos reservados.</p>
+        <div class="copyright">
+            &copy; 2026 MicroXystem. Todos los derechos reservados.
+        </div>
     </footer>
 
 </body>

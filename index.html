@@ -1,18 +1,12 @@
 
 
-           <!DOCTYPE html>
-
-
+         <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Microsystem",
-  "url": "https://tu-dominio-real.com"
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroXystem - Sistema de Contabilidad y Facturación</title>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -25,7 +19,6 @@
             color: #333;
             line-height: 1.6;
         }
-        /* Navegación */
         header {
             background-color: #ffffff;
             padding: 15px 10%;
@@ -40,13 +33,13 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #00a8e8
+            color: #2c3e50;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         .logo span {
-            color: #00a8e8
+            color: #2ecc71;
         }
         nav a {
             margin-left: 20px;
@@ -56,10 +49,10 @@
             transition: 0.3s;
         }
         nav a:hover {
-            color: #00a8e8
+            color: #2ecc71;
         }
         .btn-header {
-            background-color: #00a8e8
+            background-color: #2ecc71;
             color: white;
             padding: 8px 18px;
             border-radius: 5px;
@@ -67,11 +60,9 @@
             transition: 0.3s;
         }
         .btn-header:hover {
-            background-color: #007ea7
+            background-color: #27ae60;
             color: white;
         }
-
-        /* Sección de Portada (Hero) */
         .hero {
             padding: 80px 10%;
             display: flex;
@@ -118,8 +109,6 @@
             background-color: white;
             color: #2c3e50;
         }
-
-        /* Características (Features) */
         .features {
             padding: 80px 10%;
             text-align: center;
@@ -162,8 +151,6 @@
             color: #7f8c8d;
             font-size: 15px;
         }
-
-        /* Sección de Información / Datos */
         .info-section {
             background-color: #eaeded;
             padding: 80px 10%;
@@ -208,8 +195,6 @@
             color: #555;
             margin-bottom: 20px;
         }
-
-        /* Contacto */
         .contact {
             padding: 80px 10%;
             background-color: #ffffff;
@@ -232,8 +217,6 @@
             color: #2c3e50;
             margin-bottom: 10px;
         }
-
-        /* Pie de página */
         footer {
             background-color: #2c3e50;
             color: white;
@@ -245,22 +228,20 @@
 </head>
 <body>
 
-    <!-- Menú de Navegación -->
     <header>
-       <div class="logo">
-    <img src="Logo2.jpeg" alt="Logo de MicroXystem" style="height: 40px; vertical-align: middle;">
-    Micro<span>Xystem</span>
-</div>
-               
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <img src="Logo.jpeg" alt="Logo de MicroXystem" style="height: 50px; width: auto; max-width: 100%; border-radius: 5px;">
+            Micro<span>Xystem</span>
+        </div>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#funciones">Funciones</a>
             <a href="#detalles">Detalles</a>
             <a href="#contacto">Contacto</a>
+            <a href="#inicio" class="btn-header">Probar Demo</a>
         </nav>
     </header>
 
-    <!-- Portada (Hero) -->
     <section class="hero" id="inicio">
         <div class="hero-text">
             <h1>Lleva el control de tu negocio al siguiente nivel</h1>
@@ -273,7 +254,6 @@
         <div style="font-size: 150px; opacity: 0.2;">📈</div>
     </section>
 
-    <!-- Funciones Principales -->
     <section class="features" id="funciones">
         <h2 class="section-title">¿Qué ofrece MicroXystem?</h2>
         <p class="section-subtitle">Todo lo que necesitas para organizar las finanzas de tu emprendimiento o empresa.</p>
@@ -297,7 +277,6 @@
         </div>
     </section>
 
-    <!-- Detalles del Sistema / Datos -->
     <section class="info-section" id="detalles">
         <div class="info-img">
             <h4>Ficha Técnica de MicroXystem</h4>
@@ -311,11 +290,10 @@
         <div class="info-text">
             <h2>Datos clave y organización</h2>
             <p>El principal objetivo de <strong>MicroXystem</strong> es la optimización del tiempo. Olvídate de los cuadernos de notas o de complejas hojas de cálculo propensas a errores. Al centralizar tus datos de venta e inventario, obtienes reportes automáticos al instante.</p>
-            <p>Es una solución ligera, rápida y pensada especialmente para emprendedores y empresas que buscan una transición digital sin curvas de aprendizaje complejas.</p>
+            <p>Es una solución ligera, rápida y pensada especialmente para emprendedores y microempresas que buscan una transición digital sin curvas de aprendizaje complejas.</p>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
     <section class="contact" id="contacto">
         <h2 class="section-title">¿Tienes preguntas?</h2>
         <p class="section-subtitle">Estamos aquí para ayudarte a digitalizar tu negocio.</p>
@@ -332,7 +310,6 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
     <footer>
         <p>&copy; 2026 MicroXystem. Todos los derechos reservados.</p>
     </footer>

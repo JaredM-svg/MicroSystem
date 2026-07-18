@@ -1,21 +1,20 @@
 
  
  
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MicroXystem - Sistema integral de contabilidad, facturación electrónica e inventario.">
-    <meta name="keywords" content="MicroXystem, sistema contable, facturacion electronica, control de inventario">
+    <meta name="description" content="MicroXystem - Sistema integral de contabilidad, facturación electrónica e inventario. Optimiza la gestión de tu negocio de forma eficiente.">
+    <meta name="keywords" content="MicroXystem, sistema contable, facturacion electronica, control de inventario, software empresarial">
     <title>MicroXystem - Sistema de Gestión Empresarial</title>
     <style>
-        /* Variables de Diseño - Paleta Celeste */
+        /* Variables de Diseño con enfoque en Celeste */
         :root {
-            --celeste-principal: #38bdf8; /* Celeste brillante neón */
-            --celeste-oscuro: #0284c7;    /* Azul celeste para contraste */
-            --celeste-claro: #e0f2fe;     /* Fondo suave */
+            --celeste-principal: #38bdf8; /* Celeste brillante neón moderno */
+            --celeste-oscuro: #0284c7;    /* Azul celeste para contrastes y botones */
+            --celeste-claro: #e0f2fe;     /* Fondo suave para destacar secciones */
             --gris-oscuro: #1e293b;       /* Texto principal */
             --gris-blanco: #f8fafc;       /* Fondo general */
             --blanco: #ffffff;
@@ -52,27 +51,29 @@
             padding: 0.8rem 2rem;
         }
 
-        /* Contenedor del Logo de la Empresa */
-        .logo-container {
+        /* Contenedor Unificado: Logo2 + Texto de Marca */
+        .logo-combined-container {
             display: flex;
             align-items: center;
             text-decoration: none;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
-        .logo-img {
-            height: 50px; /* Tamaño del átomo en el menú */
+        .brand-icon-img {
+            height: 45px; /* Altura ideal para el átomo en el menú */
             width: auto;
             object-fit: contain;
         }
 
-        .logo-text {
+        .brand-text {
             font-size: 1.6rem;
             font-weight: 800;
             color: var(--gris-oscuro);
+            letter-spacing: -0.5px;
         }
 
-        .logo-text span {
+        /* Xystem en color Celeste */
+        .brand-text span {
             color: var(--celeste-principal);
         }
 
@@ -105,9 +106,9 @@
             margin: 0 auto;
         }
 
-        /* Logo Grande en el centro de la página */
+        /* Logo de átomo grande (Logo2) para la sección central */
         .hero-logo-img {
-            height: 120px;
+            height: 110px;
             width: auto;
             margin-bottom: 1.5rem;
             object-fit: contain;
@@ -120,6 +121,7 @@
             font-weight: 800;
         }
 
+        /* Xystem celeste en el título principal */
         .hero h1 span {
             color: var(--celeste-oscuro);
         }
@@ -147,7 +149,7 @@
             transform: translateY(-2px);
         }
 
-        /* Sección de Módulos */
+        /* Sección de Módulos / Funciones */
         .features {
             max-width: 1200px;
             margin: 0 auto;
@@ -208,7 +210,7 @@
             font-size: 1rem;
         }
 
-        /* Pie de Página */
+        /* Pie de Página / Contacto */
         footer {
             background-color: var(--gris-oscuro);
             color: var(--blanco);
@@ -230,22 +232,24 @@
         .footer-logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
-        .footer-logo-img {
-            height: 40px;
+        /* El átomo se invierte a un tono claro para el footer oscuro */
+        .footer-icon-img {
+            height: 38px;
             width: auto;
             object-fit: contain;
-            filter: invert(1); /* Hace que resalte bien sobre el fondo oscuro */
+            filter: invert(1);
         }
 
-        .footer-logo-text {
+        .footer-brand-text {
             font-size: 1.5rem;
             font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        .footer-logo-text span {
+        .footer-brand-text span {
             color: var(--celeste-principal);
         }
 
@@ -267,7 +271,7 @@
             color: #94a3b8;
         }
 
-        /* Responsivo */
+        /* Responsivo sencillo */
         @media (max-width: 768px) {
             .nav-container, .footer-content {
                 flex-direction: column;
@@ -280,7 +284,10 @@
             .hero h1 {
                 font-size: 2.3rem;
             }
-            .logo-container, .footer-logo-container {
+            .hero-logo-img {
+                height: 80px;
+            }
+            .logo-combined-container, .footer-logo-container {
                 justify-content: center;
             }
         }
@@ -288,13 +295,13 @@
 </head>
 <body>
 
-    <!-- Menú Superior -->
+    <!-- Navegación Superior -->
     <header>
         <nav class="nav-container">
-            <a href="#" class="logo-container">
-                <!-- LLAMADA AL LOGO2 -->
-                <img src="Logo2.jpeg" alt="Logo MicroXystem" class="logo-img">
-                <div class="logo-text">Micro<span>X</span>ystem</div>
+            <!-- Combinación: Icono Átomo (Logo2) + Texto con Xystem en Celeste -->
+            <a href="#" class="logo-combined-container">
+                <img src="Logo2.jpeg" alt="Icono Átomo MicroXystem" class="brand-icon-img">
+                <div class="brand-text">Micro<span>Xystem</span></div>
             </a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
@@ -304,18 +311,18 @@
         </nav>
     </header>
 
-    <!-- Inicio / Hero -->
+    <!-- Sección de Bienvenida / Hero -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <!-- LLAMADA AL LOGO2 GRANDE -->
-            <img src="Logo2.jpeg" alt="Logo Grande MicroXystem" class="hero-logo-img">
-            <h1>Bienvenido a <span>MicroXystem</span></h1>
+            <!-- Icono Átomo grande decorativo central (Logo2) -->
+            <img src="Logo2.jpeg" alt="Logo Átomo Grande MicroXystem" class="hero-logo-img">
+            <h1>Bienvenido a Micro<span>Xystem</span></h1>
             <p>La plataforma inteligente diseñada para simplificar y automatizar los procesos operativos, contables y administrativos de tu negocio en tiempo real.</p>
             <a href="#modulos" class="btn-celeste">Explorar Módulos</a>
         </div>
     </section>
 
-    <!-- Módulos del sistema -->
+    <!-- Características del Sistema / Soluciones -->
     <section class="features" id="modulos">
         <h2 class="section-title">Nuestras Soluciones</h2>
         <div class="grid-features">
@@ -341,13 +348,13 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- Pie de Página / Soporte -->
     <footer id="soporte">
         <div class="footer-content">
             <div class="footer-logo-container">
-                <!-- LLAMADA AL LOGO2 EN EL PIE DE PÁGINA -->
-                <img src="Logo2.jpeg" alt="Logo MicroXystem Blanco" class="footer-logo-img">
-                <div class="footer-logo-text">Micro<span>X</span>ystem</div>
+                <!-- Átomo y texto alineados en el pie de página -->
+                <img src="Logo2.jpeg" alt="Icono Átomo MicroXystem Claro" class="footer-icon-img">
+                <div class="footer-brand-text">Micro<span>Xystem</span></div>
             </div>
             <div class="contact-info">
                 <p>¿Necesitas ayuda técnica? Escríbenos a: <a href="mailto:soporte@microxystem.com">soporte@microxystem.com</a></p>
